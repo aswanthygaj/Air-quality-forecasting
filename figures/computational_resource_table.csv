@@ -1,0 +1,7 @@
+Model,Architecture / Formulation,Trainable_Parameters,Total_Parameters,Training_Time_Per_Fold,Total_Training_Time_5Folds,Inference_Latency_Per_CityDay,Peak_RAM_Usage,Hardware_Requirement,Routine_Day_Performance,Peak_Episode_Performance
+Persistence,Naive y(t+h) = y(t),0,0,< 0.01 sec,< 0.05 sec,< 0.001 ms,< 50 MB,Any CPU,Poor (Baseline),Poor (Lagging)
+Regularized Ridge Regression,L2-regularized linear with 25 autoregressive & weather features,78,78,0.15 sec,0.8 sec,0.003 ms,~120 MB,Standard CPU,Optimal (Lowest Error),Sub-optimal (L2 shrinkage)
+Gradient Boosted Trees (GBM),"HistGradientBoosting (300 trees, max 15 leaves, L2 reg)",13500,13500,2.8 sec,14.2 sec,6.14 ms,~250 MB,Standard CPU,Optimal (Matches Ridge),Moderate
+Single-Seed LSTM,"2-layer LSTM (hidden=64, dropout=0.2) + MLP Head (64->32->3)",58755,58755,42.5 sec,3.5 min,5.29 ms,~450 MB,CPU / GPU,Moderate (+0.52 MAE lag),Superior on Peaks
+LSTM Ensemble (3 Seeds),Ensemble of 3 independently trained LSTM networks,176265,176265,128 sec (2.1 min),6.2 min,15.87 ms,~650 MB,Multi-core CPU / GPU,Moderate,Highest (Best Peak Detection)
+Linear–LSTM Blend (50/50),Equal-weight blend of Ridge and 3-seed LSTM Ensemble,176343,176343,130 sec (2.2 min),6.3 min,15.88 ms,~680 MB,Multi-core CPU / GPU,High (Robust),Highest (Balances Alert Skill)

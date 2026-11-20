@@ -1,0 +1,11 @@
+pandas
+numpy
+requests
+torch
+prophet
+streamlit
+plotly
+scikit-learn
+# optional, only for src/train_tft.py
+# pytorch-forecasting
+# lightning

@@ -1,0 +1,11 @@
+model,MAE_24h,MAE_72h
+Persistence,9.79,15.43
+Seasonal avg (scaled),42.37,42.40
+Ridge: history,9.87,14.19
+Ridge: +wx,9.64,13.75
+Ridge: +reg,9.94,14.30
+Ridge: +wx+reg,9.72,13.87
+LSTM: history,10.12+/-0.10,14.55+/-0.07
+LSTM: +wx,10.41+/-0.12,14.73+/-0.42
+LSTM: +reg,11.12+/-0.52,16.90+/-1.19
+LSTM: +wx+reg,10.48+/-0.31,15.35+/-0.13
