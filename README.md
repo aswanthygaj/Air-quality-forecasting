@@ -97,21 +97,6 @@ To explore live and rolling predictions across all Indian cities in a browser:
 ```bash
 streamlit run app.py
 ```
-
----
-
-## 📜 Citation
-
-If you use this benchmark, the fixed-station curation protocol, or experimental results in your research, please cite:
-```bibtex
-@article{thuliraj2026airquality,
-  title={When Does Deep Learning Add Value in Urban Air Quality Forecasting? An Empirical Benchmark on Indian Cities under Extreme Pollution and Regime Shifts},
-  author={Thuliraj, et al.},
-  journal={Working Paper / In Review},
-  year={2026}
-}
-```
-
 ---
 
 ## 📄 License
